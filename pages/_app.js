@@ -1,7 +1,12 @@
-import '../styles/globals.css'
+import '../styles/globals.css';
+import Header from '../elements/Header';
+import SessionProvider from '../elements/SessionProvider';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+export default function MyApp({ Component, pageProps }) {
+  return (
+					<SessionProvider>
+					<Header />
+									<Component {...pageProps} />
+					</SessionProvider>
+	)
 }
-
-export default MyApp
