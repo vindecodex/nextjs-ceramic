@@ -8,11 +8,13 @@
 #### Requirements
 - node v14.x+
 
+- metamask extension installed in your browser
+
 - ceramic node running locally - [here's how](https://developers.ceramic.network/build/cli/installation/)
 
 #### Starting the project
 
-Clone this repository and install dep. `npm i`
+Clone this repository and install dep. with `npm i`
 
 Ceramic node should be running by now before running below command
 

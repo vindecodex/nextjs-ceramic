@@ -6,12 +6,3 @@ export default function Home() {
 					<h1>Home</h1>
   )
 }
-
-export const getServerSideProps = withIronSessionSsr(function({ req, res }) {
-				console.log(req.session, 'index');
-				return {
-								props: {
-												user: {}
-								}
-				}
-}, ironSessionOpt);

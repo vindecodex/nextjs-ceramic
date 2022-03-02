@@ -13,7 +13,6 @@ export default function Profile({user}) {
 }
 
 export const getServerSideProps = withIronSessionSsr(async function getServerSideProps({ req, res }) {
-				console.log(req.session, 'profile');
 				if (!req.session?.user) {
 								res.setHeader('location', '/');
 								res.statusCode = 302;

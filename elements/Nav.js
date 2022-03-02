@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import { SessionContext } from './SessionProvider';
 
-import { useEffect, useState, useContext } from 'react';
+import { useEffect, useContext } from 'react';
 
 export default function Nav() {
 				const { connect, profile, loading } = useContext(SessionContext);
