@@ -26,7 +26,7 @@ const nextSessionOpt = {
 				}
 }
 
-const getSession = nextSession(nextSessionOpt);
+export const getSession = nextSession(nextSessionOpt);
 
 export default async function sessionMiddleware(req, res, next) {
 				await getSession(req, res);
