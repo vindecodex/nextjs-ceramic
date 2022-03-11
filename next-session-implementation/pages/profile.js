@@ -12,14 +12,16 @@ export default function Profile({ user }) {
 
 export async function getServerSideProps({ req, res }) {
 				const session = await getSession(req, res);
+				let user = session?.user;
 				if (!session.user) {
 								res.setHeader('location', '/');
 								res.statusCode = 302;
 								res.end();
+								user =  null;
 				}
 				return {
 								props: {
-												user: session?.user
+												user
 								}
 				}
 }
