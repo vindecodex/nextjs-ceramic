@@ -7,7 +7,7 @@ const useCeramic = () => {
 				const [ ceramicSelf, setCeramicSelf ] = useState(() => {});
 				const [ address, setAddress ] = useState('');
 				const [ profile, setProfile ] = useState(undefined);
-				const [ loading, setLoading ] = useState(false);
+				const [ status, setStatus ] = useState('connect');
 
 				const auth = async () => {
 								const [addr] = await window.ethereum.request({ method: 'eth_requestAccounts' });
@@ -26,7 +26,7 @@ const useCeramic = () => {
 				}
 
 				const connect = async() => {
-								setLoading(true);
+								setStatus('connecting');
 								await auth();
 				}
 
@@ -38,7 +38,7 @@ const useCeramic = () => {
 								const _address = Object.keys(cryptoAccounts)[0];
 								setProfile({..._profile});
 								setAddress(_address);
-								setLoading(false);
+								setStatus('connected');
 								await fetch('/api/ceramic', {
 												method: 'POST',
 												headers: { 'Content-Type': 'application/json' },
@@ -51,7 +51,7 @@ const useCeramic = () => {
 				return {
 								connect,
 								profile,
-								loading
+								status
 				}
 }
 
