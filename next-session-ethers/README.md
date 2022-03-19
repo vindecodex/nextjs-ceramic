@@ -10,6 +10,8 @@
 
 - metamask extension installed in your browser
 
+- redis v6+
+
 #### Starting the project
 
 Clone this repository and install dep. with `npm i`
