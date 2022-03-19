@@ -10,6 +10,8 @@
 
 - metamask extension installed in your browser
 
+- redis v6+
+
 - ceramic node running locally - [here's how](https://developers.ceramic.network/build/cli/installation/)
 
 #### Starting the project
